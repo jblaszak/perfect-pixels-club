@@ -1,0 +1,113 @@
+.roadmap {
+    margin-top: 3rem;
+    margin-bottom: -2rem;
+}
+
+.header {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+
+.header h1 {
+    font-family: Inter-Bold;
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.header p {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    padding: 0;
+    color: var(--color-soft-text);
+    max-width: 60%;
+}
+
+.timeline {
+    margin: 2rem auto;
+    margin-bottom: 0;
+}
+
+.timeline li {
+    list-style: none;
+    min-height: 50px;
+    border-left: 3px solid var(--color-gray-600);
+    padding: 0 0 50px 30px;
+    position: relative;
+}
+
+.timeline li:last-child {
+    border-left: 3px solid transparent;
+}
+
+.timeline li::before {
+    position: absolute;
+    left: -14px;
+    top: 0px;
+    content: " ";
+    border: 5px solid var(--color-gray-600);
+    border-radius: 100%;
+    background: var(--color-background2);
+    height: 25px;
+    width: 25px;
+}
+
+.isReached {
+    border-color: var(--color-link-color) !important;
+    
+}
+
+.isReached::before {
+    border-color: var(--color-link-color) !important;
+    background: #033a7a !important;
+}
+
+.title {
+    color: var(--color-gray-600);
+    /* margin-bottom: 1rem; */
+    top: -0.5rem;
+    left: 30px;
+    padding: 0;
+    position: absolute;
+    font-family: Inter-Bold;
+    font-size: 1.75rem;
+}
+
+.isReached .title {
+    background: linear-gradient(255deg, white 0%, var(--color-link-color) 100%);
+    /* background: linear-gradient(255deg, white 50%, var(--color-link-color) 100%); */
+    background-clip: text;
+    color: transparent;
+}
+
+.description {
+    padding-top: 2.5rem;
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    color: var(--color-gray-600);
+}
+
+.isReached .description {
+    color: var(--color-soft-text);
+}
+
+@media (max-width: 650px) {
+    .title {
+        padding-top: 0.25rem;
+        font-size: 1.5rem;
+    }
+    
+    .description {
+        font-size: 1rem;
+    }
+    
+    .isReached .title {
+        background: linear-gradient(255deg, white 0%, var(--color-link-color) 100%);
+        background-clip: text;
+        color: transparent;
+    }
+}

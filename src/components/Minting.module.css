@@ -1,0 +1,79 @@
+.container {
+    background-color: var(--color-background2);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-bottom: 4rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    font-size: 1.25rem;
+    font-family: Inter-Regular;
+    margin-bottom: 1rem;
+}
+
+.message > span {
+    font-size: 1.5rem;
+    font-family: Inter-Bold;
+    margin-left: 1rem;
+}
+
+.mintFee {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.error {
+    max-width: 350px;
+}
+
+.mintFee span {
+    margin-left: 1rem;
+    color: #a977ff;
+}
+
+.isMinting {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.isMinting span {
+    height: 1rem;
+    width: 1rem;
+    margin-left: 1rem;
+    border-radius: 2px;
+    animation: flash 2s linear infinite;
+}
+
+@keyframes flash {
+    0% {
+        background-color: red;
+    }
+    25% {
+        background-color: yellow;
+    }
+    50% {
+        background-color: green;
+    }
+    75% {
+        background-color: blue;
+    }
+    100% {
+        background-color: red;
+    }
+}
+
+.container button {
+    padding: 1rem;
+    font-size: 1.25rem;
+}

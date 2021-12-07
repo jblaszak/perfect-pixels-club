@@ -1,0 +1,9 @@
+{
+  "short_name": "Crypto Flex Pixels",
+  "name": "Crypto Flex Pixels NFT",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
