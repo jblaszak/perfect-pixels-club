@@ -5,9 +5,8 @@
   width: 100%;
   z-index: 9999;
   height: 4rem;
-  background-color: rgba(17,25,40,.75);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(255, 255, 255, .125);
+  background-color: var(--color-background2);
+  box-shadow: 0 2px 5px #000000AA;
   display: flex;
   justify-content: center;
 }
@@ -59,7 +58,7 @@
 .nav a:hover,
 .nav a:active,
 .nav a.active {
-  color: var(--color-green-very-light);
+  color: var(--color-very-light);
 }
 
 

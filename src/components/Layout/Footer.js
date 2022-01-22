@@ -12,28 +12,29 @@ const Footer = () => {
       <div className={classes.container}>
         <div className={classes.top}>
           <div>
-            <h1>Crypto Flex Pixels</h1>
-            <p>An innovative new NFT project.</p>
+            <h1>Perfect Pixels Club</h1>
+            <p>
+              A collection of different NFT projects on the polygon network!
+            </p>
           </div>
           <div className={classes.links}>
             <Link className={classes.homeLink} to="/">
               Home
             </Link>
-            <Link to="/collection-viewer">Collection Viewer</Link>
             <Link to="/terms">Terms & Conditions</Link>
-            <a
+            {/* <a
               href={`https://polygonscan.com/address/${CONSTANTS.CONTRACT_ADDRESS}`}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Smart Contract"
             >
               Smart Contract
-            </a>
+            </a> */}
           </div>
         </div>
         <div className={classes.bottom}>
           <div>
-            {`© ${new Date().getFullYear()} Crypto Flex Pixels. All rights reserved.`}
+            {`© ${new Date().getFullYear()} Perfect Pixels Club. All rights reserved.`}
           </div>
           <IconLinks />
         </div>

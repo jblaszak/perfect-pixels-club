@@ -1,6 +1,10 @@
+.container {
+    background-color: var(--color-background2);
+    padding: 2rem 0;
+}
+
 .roadmap {
     margin-top: 3rem;
-    margin-bottom: -2rem;
 }
 
 .header {
@@ -11,94 +15,53 @@
    text-align: center;
 }
 
-.header h1 {
-    font-family: Inter-Bold;
-    font-size: 2.5rem;
+.header > h1 {
+    font-size: 4rem;
     margin: 0;
-    padding: 0;
-    color: white;
+    font-weight: 700;
 }
 
 .header p {
-    margin-top: 1rem;
+    margin: 1rem 0 3rem 0;
     font-size: 1.25rem;
+    line-height: 1.5rem;
     padding: 0;
     color: var(--color-soft-text);
     max-width: 60%;
 }
 
-.timeline {
-    margin: 2rem auto;
-    margin-bottom: 0;
-}
-
-.timeline li {
-    list-style: none;
-    min-height: 50px;
-    border-left: 3px solid var(--color-gray-600);
-    padding: 0 0 50px 30px;
-    position: relative;
-}
-
-.timeline li:last-child {
-    border-left: 3px solid transparent;
-}
-
-.timeline li::before {
-    position: absolute;
-    left: -14px;
-    top: 0px;
-    content: " ";
-    border: 5px solid var(--color-gray-600);
-    border-radius: 100%;
-    background: var(--color-background2);
-    height: 25px;
-    width: 25px;
-}
-
-.isReached {
-    border-color: var(--color-link-color) !important;
-    
-}
-
-.isReached::before {
-    border-color: var(--color-link-color) !important;
-    background: #033a7a !important;
-}
-
 .title {
-    color: var(--color-gray-600);
-    /* margin-bottom: 1rem; */
-    top: -0.5rem;
-    left: 30px;
-    padding: 0;
-    position: absolute;
-    font-family: Inter-Bold;
-    font-size: 1.75rem;
+    font-weight: 700;
+    font-size: 2rem;
 }
 
-.isReached .title {
-    background: linear-gradient(255deg, white 0%, var(--color-link-color) 100%);
-    /* background: linear-gradient(255deg, white 50%, var(--color-link-color) 100%); */
-    background-clip: text;
-    color: transparent;
+.title:after {
+    position: relative;
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    background-color: white;
+    height: 3px;
+    width: 100px;
+}
+
+.timeline {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
 }
 
 .description {
-    padding-top: 2.5rem;
     font-size: 1.25rem;
     line-height: 1.5rem;
-    color: var(--color-gray-600);
-}
-
-.isReached .description {
     color: var(--color-soft-text);
 }
 
 @media (max-width: 650px) {
     .title {
-        padding-top: 0.25rem;
-        font-size: 1.5rem;
+        padding-top: 0.4rem;
+        font-size: 1.25rem;
     }
     
     .description {

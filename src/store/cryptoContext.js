@@ -27,7 +27,7 @@ export const CryptoContextProvider = (props) => {
   const dispatch = useDispatch();
 
   useEffect(async () => {
-    await connectWeb3();
+    // await connectWeb3();
   }, []);
 
   useEffect(async () => {
@@ -59,49 +59,6 @@ export const CryptoContextProvider = (props) => {
     });
   };
 
-  const updateMintedPixels = async (contract) => {
-    let tokensMinted;
-    const tryUpdateMintedPixels = async () => {
-      let tokensAvailable = await contract.getAvailableTokensList();
-      tokensMinted = CONSTANTS.TOTAL_TOKENS_ARRAY.filter(
-        (x) => !tokensAvailable.includes(x)
-      );
-      setMintedPixels(tokensMinted);
-    };
-    try {
-      await tryUpdateMintedPixels();
-      const mintChange = new CustomEvent("mintChange", {
-        detail: tokensMinted,
-      });
-      window.dispatchEvent(mintChange);
-    } catch (error) {
-      console.log("Error grabbing minted pixels info", error);
-      updateStatus("error", "Error grabbing minted pixels info!", dispatch);
-    }
-    return tokensMinted;
-  };
-
-  const updateMintedPixelsSingle = async (tokenId) => {
-    let mintedTokens;
-    const tryUpdateMintedPixelsSingle = async () => {
-      mintedTokens = [...mintedPixels];
-      if (!mintedTokens.includes(tokenId)) {
-        mintedTokens.push(tokenId);
-      }
-      setMintedPixels(mintedTokens);
-    };
-    try {
-      await tryUpdateMintedPixelsSingle();
-      const mintChange = new CustomEvent("mintChange", {
-        detail: mintedTokens,
-      });
-      window.dispatchEvent(mintChange);
-    } catch (error) {
-      console.log("Error updating minted pixels info", error);
-      updateStatus("error", "Error updating minted pixels info!", dispatch);
-    }
-  };
-
   const connectWeb3 = async () => {
     const setupContract = async () => {
       const newProvider = new ethers.providers.JsonRpcProvider(
@@ -115,7 +72,6 @@ export const CryptoContextProvider = (props) => {
       );
 
       await getMintInfo(newContract);
-      await updateMintedPixels(newContract);
 
       setProvider(newProvider);
       setContract(newContract);

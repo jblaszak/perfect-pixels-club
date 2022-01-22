@@ -1,0 +1,17 @@
+:root {
+    --text-shadow-color: black;
+}
+
+.container {
+    background-color: var(--color-background2);
+    padding: 2rem 0;
+}
+
+.title {
+    text-align: center;
+    font-size: 4rem;
+    margin: 0 0 -2rem 0;
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+}

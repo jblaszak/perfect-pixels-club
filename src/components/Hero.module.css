@@ -1,58 +1,84 @@
-.container {
-   position: relative;
-}
-
-.canvas {
-   position: absolute;
-   top: 0;
-   left: 0;
-   bottom: 0;
-   right: 0;
-}
-
-.content {
-   position: absolute;
-   top: 0;
-   left: 0;
-   bottom: 0;
-   right: 0;
+.hero {
    display: flex;
    justify-content: center;
    align-items: center;
+   min-height: 400px;
+   font-family: "8bitlim", sans-serif;
+   font-size: 6rem;
    color: white;
-   flex-direction: column;
+   text-shadow: -4px 3px 2px #000, 2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, -2px 0 0 #000;
 }
 
-.title {
-    font-size: 4rem;
-    margin: 1rem;
-    padding: 0.5rem 1rem;
-    background-color: rgba(17,25,40,.45);
-    backdrop-filter: blur(2px) saturate(180%);
-    border-radius: 1rem;
+.perfect, .pixels, .club, .final, .final2, .final3 {
+   margin: 1rem;
 }
 
-.subtitle {
-    font-size: 1.5rem;
-    margin: 0;
-    padding: 0.5rem 1rem;
-    background-color: rgba(17,25,40,.45);
-    backdrop-filter: blur(2px) saturate(180%);
-    border-radius: 1rem;
+.perfect, .pixels, .club, .final2, .final3 {
+   opacity: 0;
 }
 
-@media (max-width: 650px) {
-   .title {
-      font-size: 3rem;
+.perfect {
+   animation: start 2s 0.5s ease-in forwards;
+}
+
+.pixels {
+   animation: start 2s 0.75s ease-in forwards;
+}
+
+.club {
+   animation: start 2s 1s ease-in forwards;
+}
+
+.final {
+   opacity: 1;
+}
+
+.final2 {
+   animation: end 0s 0.2s linear forwards;
+}
+
+.final3 {
+   animation: end 0s 0.4s linear forwards;
+}
+
+@keyframes start {
+   0% {
+      transform: scale(0);
+   }
+   50%, 80% {
+      opacity: 1;
+      transform: scale(1);
+   }
+   100% {
+      opacity: 0;
    }
 }
 
-@media (max-width: 500px) {
-   .title {
-      font-size: 2rem;
-   }
-
-   .subtitle {
-      font-size: 1.25rem;
+@keyframes end {
+   0%, 100% {
+      opacity: 1;
    }
 }
+
+@media (max-width: 900px) {
+   .hero {
+      font-size: 4rem;
+      min-height: 325px;
+   }
+
+   .perfect, .pixels, .club, .final, .final2, .final3 {
+      margin: 0.75rem;
+   }
+}
+
+@media (max-width: 600px) {
+   .hero {
+      font-size: 2.5rem;
+      min-height: 250px;
+   }
+
+   .perfect, .pixels, .club, .final, .final2, .final3 {
+      margin: 0.4rem;
+   }
+}
+

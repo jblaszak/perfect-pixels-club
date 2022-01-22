@@ -30,16 +30,9 @@ const MainHeader = (props) => {
   let navbar = (
     <nav className={classes.navbar}>
       <ul className={classes.nav}>
-        <li>
-          <NavLink to="/" activeClassName={classes.active} exact>
-            Home
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/collection-viewer" activeClassName={classes.active}>
-            Collection Viewer
-          </NavLink>
-        </li>
+        {/* <li>
+          <a href="https://www.perfectpixels.club">Perfect Pixels Club</a>
+        </li> */}
       </ul>
       <IconLinks />
     </nav>
@@ -73,7 +66,7 @@ const MainHeader = (props) => {
     <React.Fragment>
       <header className={headerClasses}>
         <div className={classes.container}>
-          <div className={classes.logo}>Crypto Flex Pixels</div>
+          <div className={classes.logo}>Perfect Pixels Club</div>
           {navbar}
         </div>
       </header>

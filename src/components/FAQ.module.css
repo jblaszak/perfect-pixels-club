@@ -1,0 +1,13 @@
+.FAQList {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    text-shadow: 2px 0 2px #000, 0 2px 2px #000, -2px 0 2px #000, 0 -2px 2px #000;
+}

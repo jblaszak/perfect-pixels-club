@@ -1,8 +1,37 @@
 .card {
     background-color: var(--color-card-background);
-    border-radius: 4px;
-    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    /* border: 1px solid var(--color-border); */
     padding: 1.5rem;
-    color: white;
     overflow: hidden;
+    box-shadow: -4px 3px 2px #000, 2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, -2px 0 0 #000, -7px 7px 7px transparent;
+    transition: 0.5s;
+    color: white;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: -4px 3px 2px #000, 2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, -2px 0 0 #000, -7px 7px 7px #00000070;
+}
+
+.aljfdsd {
+    color: #ffc897;
+    color: #ffc796;
+    color: #ffead2;
+    color: #ffa4d4;
+    color: #c5c5ff;
+    color: #83ffc1;
+    color: #ffe276;
+    color: #ffe780;
+    color: #94eaeb;
+    color: #e7bafa;
+    color: #e8a68b;
+    color: #a4a4f4;
+    color: #99e2ff;
+    color: #f2e7ea;
+    color: #b3ffc7;
+    color: #e8a68b;
+    color: #80b1ff;
+    color: #bbefff;
+    color: #99e2ff;
 }

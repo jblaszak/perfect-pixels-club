@@ -11,9 +11,12 @@ const Community = () => {
         <Card className={classes.community}>
           <h1>Join Our Community</h1>
           <p>
-            Trying to decide which pixel to get? Discuss with others on which
-            attributes hold the most value! Join us to get the news as soon as
-            possible and follow our latest announcements.
+            Want to know more about our projects or have some ideas you want to
+            contribute? Looking for friends that like the same art?
+          </p>
+          <p>
+            Join us to get sneak peaks of things we are working on, obtain free
+            NFTs and follow our latest announcements.
           </p>
           <a
             href={CONSTANTS.DISCORD}

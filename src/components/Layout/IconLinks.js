@@ -29,7 +29,7 @@ const IconLinks = () => {
           {" "}
         </a>
       </div>
-      <div>
+      {/* <div>
         <a
           className={classes.opensea}
           href={CONSTANTS.OPENSEA}
@@ -39,7 +39,7 @@ const IconLinks = () => {
         >
           {" "}
         </a>
-      </div>
+      </div> */}
     </div>
   );
 };
