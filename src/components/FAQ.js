@@ -23,7 +23,7 @@ const FAQ = () => {
             rel="noopener noreferrer"
             aria-label="Crypto/NFT guide"
           >
-            crypto/NFT guide here
+            our crypto/NFT guide here
           </a>
           .
         </p>

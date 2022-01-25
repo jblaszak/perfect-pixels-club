@@ -10,26 +10,20 @@ const DropdownMenu = (props) => {
       className={classes.dropdown}
       onClick={props.onClickHandler}
     >
-      <a className={classes.link} to="/">
-        Perfect Pixels Club
-      </a>
-      <a className={classes.link} href="https://twitter.com/Flex_Pixels_NFT">
+      <a className={classes.link} href={CONSTANTS.TWITTER}>
         Twitter
       </a>
-      <a className={classes.link} href="https://discord.gg/Epy2xtzZrx">
+      <a className={classes.link} href={CONSTANTS.DISCORD}>
         Discord
       </a>
-      <a className={classes.link} href="https://www.opensea.io">
-        OpenSea
-      </a>
       <a
-        href={`https://polygonscan.com/address/${CONSTANTS.CONTRACT_ADDRESS}`}
+        href={`https://www.cryptoflexpixels.com`}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Smart Contract"
+        aria-label="Crypto Flex Pixels"
         className={classes.link}
       >
-        Smart Contract
+        Crypto Flex Pixels
       </a>
     </div>
   );

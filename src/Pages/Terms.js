@@ -2,6 +2,8 @@ import Section from "../components/Layout/Section";
 import TermsSection from "../components/TermsSection";
 import * as CONSTANTS from "../constants";
 
+import classes from "./Terms.module.css";
+
 const Terms = () => {
   const terms = [
     {
@@ -94,11 +96,13 @@ nonexclusive worldwide licence to incorporate and use the feedback for any purpo
   ];
 
   return (
-    <Section>
-      {terms.map((term) => (
-        <TermsSection title={term.title} writeups={term.writeups} />
-      ))}
-    </Section>
+    <div className={classes.terms}>
+      <Section>
+        {terms.map((term) => (
+          <TermsSection title={term.title} writeups={term.writeups} />
+        ))}
+      </Section>
+    </div>
   );
 };
 
