@@ -1,5 +1,6 @@
 import FAQItem from "./FAQItem";
 import Section from "./Layout/Section";
+import PPCLink from "./UI/PPCLink";
 
 import * as CONSTANTS from "../constants";
 
@@ -17,14 +18,11 @@ const FAQ = () => {
           to find! You don't have to read it all at once, but give it a shot
           sometime as there's lots of helpful tricks to save money and keep your
           account secure! You can find{" "}
-          <a
-            href="https://medium.com/@jo.blaszak/cryptocurrencies-general-knowledge-and-buying-nfts-9a0ce596b9bd#0fbb"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Crypto/NFT guide"
-          >
-            our crypto/NFT guide here
-          </a>
+          <PPCLink
+            target="https://medium.com/@jo.blaszak/cryptocurrencies-general-knowledge-and-buying-nfts-9a0ce596b9bd#0fbb"
+            text="our crypto/NFT guide here"
+            type="external"
+          />
           .
         </p>
       ),
@@ -41,14 +39,11 @@ const FAQ = () => {
       description: (
         <p>
           Check the appropriate section in{" "}
-          <a
-            href="https://medium.com/@jo.blaszak/cryptocurrencies-general-knowledge-and-buying-nfts-9a0ce596b9bd#0fbb"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Buying crypto guide"
-          >
-            our buying crypto guide here
-          </a>
+          <PPCLink
+            target="https://medium.com/@jo.blaszak/cryptocurrencies-general-knowledge-and-buying-nfts-9a0ce596b9bd"
+            text="our buying crypto guide here"
+            type="external"
+          />
           .
         </p>
       ),
@@ -59,14 +54,11 @@ const FAQ = () => {
         <p>
           Your NFT can be found on the OpenSea website once you connect your
           wallet and view your profile. You can view your{" "}
-          <a
-            href="https://opensea.io/account"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="OpenSea Profile"
-          >
-            OpenSea profile here
-          </a>
+          <PPCLink
+            target="https://opensea.io/account"
+            text="OpenSea profile here"
+            type="external"
+          />
           .
         </p>
       ),
@@ -85,24 +77,10 @@ const FAQ = () => {
           We're open to doing collaborations with other projects. If you've got
           a fun idea or concept and would like to do a collab with us, the best
           way would be to get in touch with us through{" "}
-          <a
-            href={CONSTANTS.TWITTER}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Twitter"
-          >
-            Twitter
-          </a>{" "}
+          <PPCLink target={CONSTANTS.TWITTER} text="Twitter" type="external" />{" "}
           or through{" "}
-          <a
-            href={CONSTANTS.DISCORD}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Discord"
-          >
-            Discord
-          </a>
-          . All collab projects will be posted/created on our custom collab
+          <PPCLink target={CONSTANTS.DISCORD} text="Discord" type="external" />.
+          All collab projects will be posted/created on our custom collab
           marketplace/contract.
         </p>
       ),

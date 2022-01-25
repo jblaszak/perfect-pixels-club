@@ -54,14 +54,3 @@
 .description p {
     margin: 0;
 }
-
-.description a {
-    font-weight: bold;
-    color: blue;
-    text-decoration: none;
-}
-
-.description a:hover {
-    color: var(--color-dark);
-    text-decoration: underline;
-}

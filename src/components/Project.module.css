@@ -25,37 +25,6 @@
     line-height: 1.5rem;
 }
 
-.description a {
-    font-weight: bold;
-    color: rgb(100, 100, 255);
-    text-decoration: none;
-}
-
-.description a:hover {
-    color: var(--color-soft-text);
-    text-decoration: underline;
-}
-
-.link {
-    background-color: var(--color-dark);
-    border-radius: 10px;
-    border: 3px solid white;
-    color: white;
-    padding: 5px 10px;
-    font-size: 1.25rem;
-    display: inline-block;
-    transition: 0.25s;
-    box-shadow: -7px 7px 7px transparent;
-    text-decoration: none;
-}
-
-.link:hover {
-    background-color: var(--color-very-light);
-    cursor: pointer;
-    transform: translateY(-3px);
-    box-shadow: -5px 5px 10px #00000050;
-}
-
 .right {
     order: -1;
 }

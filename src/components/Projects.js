@@ -1,11 +1,18 @@
+import { useState } from "react";
+
 import Section from "./Layout/Section";
 import Project from "./Project";
+import PPCLink from "./UI/PPCLink";
+import PlaceholderImage from "./PlaceholderImage";
 import CFP from "../assets/CFP.png";
 
 import * as CONSTANTS from "../constants";
 import classes from "./Projects.module.css";
+import React from "react";
 
 const Projects = () => {
+  const [hoverState, setHoverState] = useState(null);
+
   const projects = [
     {
       title: "Crypto Flex Pixels",
@@ -19,21 +26,7 @@ const Projects = () => {
       title: "AI Project",
       description:
         "Using the power of AI we will be generating a variety of different artworks. There will be a different themes for a number of sub-projects within this project to keep things fresh and interesting.",
-      image: (
-        <div
-          style={{
-            display: "flex",
-            minHeight: "300px",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: "10rem",
-            backgroundColor: "black",
-            borderRadius: "10px",
-          }}
-        >
-          ?
-        </div>
-      ),
+      image: <PlaceholderImage />,
       //   linkText: "View on OpenSea",
       link: "",
     },
@@ -41,65 +34,41 @@ const Projects = () => {
       title: "Interactive PFP",
       description:
         "We've got a fun concept planned that adds interactivity to your PFP and includes a unique avatar that hasn't been seen in the NFT space so far (i.e. not an ape, cat, etc.).",
-      image: (
-        <div
-          style={{
-            display: "flex",
-            minHeight: "300px",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: "10rem",
-            backgroundColor: "black",
-            borderRadius: "10px",
-          }}
-        >
-          ?
-        </div>
-      ),
+      image: <PlaceholderImage />,
       //   linkText: "View on OpenSea",
       link: "",
     },
     {
       title: "Collab Marketplace",
       description: (
-        <p>
+        <React.Fragment>
           Interested in a collab? Send us a message on{" "}
-          <a
-            href={CONSTANTS.TWITTER}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Twitter"
-          >
-            Twitter
-          </a>{" "}
+          <PPCLink
+            target={CONSTANTS.TWITTER}
+            text="Twitter"
+            type="external"
+            styling={
+              hoverState === "Collab Marketplace"
+                ? "descriptionHover"
+                : "description"
+            }
+          />{" "}
           or{" "}
-          <a
-            href={CONSTANTS.DISCORD}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Discord"
-          >
-            Discord
-          </a>
+          <PPCLink
+            target={CONSTANTS.DISCORD}
+            text="Discord"
+            type="external"
+            styling={
+              hoverState === "Collab Marketplace"
+                ? "descriptionHover"
+                : "description"
+            }
+          />
           ! We've set up a custom smart contract with a payment splitter so both
           sides are fairly compensated! (Initial sales only)
-        </p>
+        </React.Fragment>
       ),
-      image: (
-        <div
-          style={{
-            display: "flex",
-            minHeight: "300px",
-            alignItems: "center",
-            justifyContent: "center",
-            fontSize: "10rem",
-            backgroundColor: "black",
-            borderRadius: "10px",
-          }}
-        >
-          ?
-        </div>
-      ),
+      image: <PlaceholderImage />,
       linkText: "COMING SOON",
       link: "",
     },
@@ -119,6 +88,8 @@ const Projects = () => {
               linkText={project.linkText}
               link={project.link}
               orientation={index % 2 ? "right" : ""}
+              onMouseOver={() => setHoverState(project.title)}
+              onMouseOut={() => setHoverState(null)}
             />
           );
         })}

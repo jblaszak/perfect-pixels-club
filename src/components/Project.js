@@ -1,3 +1,5 @@
+import PPCLink from "./UI/PPCLink";
+
 import classes from "./Project.module.css";
 
 const Project = ({
@@ -7,30 +9,19 @@ const Project = ({
   linkText,
   link,
   orientation,
+  onMouseOver,
+  onMouseOut,
 }) => {
-  let linkButton = null;
-  if (linkText && link) {
-    linkButton = (
-      <a
-        className={classes.link}
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label={linkText}
-      >
-        {linkText}
-      </a>
-    );
-  } else if (linkText) {
-    linkButton = <div className={classes.link}>{linkText}</div>;
-  }
-
   return (
-    <div className={classes.container}>
+    <div
+      className={classes.container}
+      onMouseOver={onMouseOver}
+      onMouseOut={onMouseOut}
+    >
       <div>
         <h1>{title}</h1>
         <p className={classes.description}>{description}</p>
-        {linkButton}
+        <PPCLink link={link} text={linkText} type="external" styling="button" />
       </div>
       <div className={`${classes.image} ${classes[orientation]}`}>{image}</div>
     </div>
