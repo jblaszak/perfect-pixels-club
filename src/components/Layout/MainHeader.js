@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, animateScroll as scroll } from "react-scroll";
 import { useSelector } from "react-redux";
 
 import useOutsideCheck from "../../hooks/useOutsideCheck";
@@ -27,12 +27,49 @@ const MainHeader = (props) => {
     statusMessage ? classes.downShifted : ""
   }`;
 
+  const offset = -60;
+  const duration = 500;
+  const activeClass = classes.active;
+
   let navbar = (
     <nav className={classes.navbar}>
       <ul className={classes.nav}>
-        {/* <li>
-          <a href="https://www.perfectpixels.club">Perfect Pixels Club</a>
-        </li> */}
+        <li>
+          <Link
+            activeClass={activeClass}
+            to="projects"
+            spy={true}
+            smooth={true}
+            offset={offset}
+            duration={duration}
+          >
+            Projects
+          </Link>
+        </li>
+        <li>
+          <Link
+            activeClass={activeClass}
+            to="roadmap"
+            spy={true}
+            smooth={true}
+            offset={offset}
+            duration={duration}
+          >
+            Roadmap
+          </Link>
+        </li>
+        <li>
+          <Link
+            activeClass={activeClass}
+            to="FAQ"
+            spy={true}
+            smooth={true}
+            offset={offset}
+            duration={duration}
+          >
+            FAQ
+          </Link>
+        </li>
       </ul>
       <IconLinks />
     </nav>
@@ -66,7 +103,9 @@ const MainHeader = (props) => {
     <React.Fragment>
       <header className={headerClasses}>
         <div className={classes.container}>
-          <div className={classes.logo}>Perfect Pixels Club</div>
+          <div className={classes.logo} onClick={() => scroll.scrollToTop()}>
+            Perfect Pixels Club
+          </div>
           {navbar}
         </div>
       </header>

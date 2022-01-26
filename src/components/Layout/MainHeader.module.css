@@ -31,6 +31,11 @@
   color: white;
 }
 
+.logo:hover {
+  cursor: pointer;
+  color: var(--color-very-light);
+}
+
 .navbar {
   display: flex;
   align-items: center;
@@ -49,15 +54,20 @@
   font-size: 1rem;
 }
 
-.nav a {
+.nav > li > a {
   text-decoration: none;
   color: white;
   transition: 0.25s;
 }
 
-.nav > a:hover,
-.nav > a:active,
-.nav > a.active {
+.nav > li > a:hover,
+.nav > li > a:active,
+.nav > li > a.active {
+  color: var(--color-very-light);
+  cursor: pointer;
+}
+
+.active {
   color: var(--color-very-light);
 }
 

@@ -12,12 +12,15 @@
     background-color: var(--color-background2);
 }
 
-.link {
+.dropdown a {
     padding: 0.5rem 1rem;
     transition: 0.25s;
+    text-decoration: none;
+    color: white;
 }
 
-.link:hover {
+.dropdown a:hover {
+    cursor: pointer;
     color: white;
     background-color: var(--color-dark);
 }

@@ -1,3 +1,7 @@
+.FAQ {
+    padding: 2rem 0;
+}
+
 .FAQList {
     display: grid;
     grid-template-columns: 1fr;

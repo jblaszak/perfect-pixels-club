@@ -12,10 +12,6 @@ import FAQ from "../components/FAQ";
 const Home = () => {
   return (
     <React.Fragment>
-      <Pixels />
-      <Hero />
-      <About />
-      <Projects />
       <Suspense
         fallback={
           <div className="centered">
@@ -23,6 +19,10 @@ const Home = () => {
           </div>
         }
       >
+        <Pixels />
+        <Hero />
+        <About />
+        <Projects />
         <Community />
         <Roadmap />
         <FAQ />

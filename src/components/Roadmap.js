@@ -42,7 +42,7 @@ const Roadmap = () => {
   ];
 
   return (
-    <div className={classes.container}>
+    <div id="roadmap" className={classes.container}>
       <Section className={classes.roadmap}>
         <div className={classes.header}>
           <h1>Roadmap</h1>

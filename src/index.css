@@ -58,6 +58,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   letter-spacing: 0 !important;
   background-color: transparent;
+  scroll-behavior: smooth;
 }
 
 button {

@@ -87,7 +87,7 @@ const FAQ = () => {
     },
   ];
   return (
-    <Section>
+    <Section id="FAQ" className={classes.FAQ}>
       <h1 className={classes.title}>FAQ</h1>
       <div className={classes.FAQList}>
         {FAQList.map((item) => {
