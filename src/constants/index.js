@@ -29,3 +29,13 @@ export const PIXEL_COLORS = [
   "#bbefff",
   "#99e2ff",
 ];
+export const BG_COLORS = [
+  "#a4a4f4",
+  "#ffc897",
+  "#bbefff",
+  "#c5c5ff",
+  "#ffe276",
+  "#80b1ff",
+  "#e7bafa",
+  "#94eaeb",
+];

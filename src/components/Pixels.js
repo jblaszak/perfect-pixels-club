@@ -24,10 +24,10 @@ class PixelField {
     this.width = width;
     this.height = height;
     this.colors = CONSTANTS.PIXEL_COLORS;
-    this.background = this.colors.splice(
-      Math.floor(Math.random() * this.colors.length),
-      1
-    );
+    this.background =
+      CONSTANTS.BG_COLORS[
+        Math.floor(Math.random() * CONSTANTS.BG_COLORS.length)
+      ];
     this.pixels = [...Array(CONSTANTS.NUM_PIXELS)].map((val) => {
       return new Pixel(
         this.colors[Math.floor(Math.random() * this.colors.length)],
