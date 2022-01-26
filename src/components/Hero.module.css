@@ -4,7 +4,7 @@
    align-items: center;
    min-height: 400px;
    font-family: "8bitlim", sans-serif;
-   font-size: 6rem;
+   font-size: clamp(2.5rem, 10.6667vw, 6rem);
    color: white;
    text-shadow: -4px 3px 2px #000, 2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, -2px 0 0 #000;
 }
@@ -62,7 +62,7 @@
 
 @media (max-width: 900px) {
    .hero {
-      font-size: 4rem;
+      /* font-size: 4rem; */
       min-height: 325px;
    }
 
@@ -73,7 +73,7 @@
 
 @media (max-width: 600px) {
    .hero {
-      font-size: 2.5rem;
+      /* font-size: 2.5rem; */
       min-height: 250px;
    }
 

@@ -32,7 +32,7 @@
 
 .title {
     font-weight: 700;
-    font-size: 2rem;
+    font-size: clamp(1.35rem, 0.8857rem + 1.9810vw, 2rem);
 }
 
 .title:after {
@@ -61,7 +61,6 @@
 @media (max-width: 650px) {
     .title {
         padding-top: 0.4rem;
-        font-size: 1.25rem;
     }
     
     .description {
