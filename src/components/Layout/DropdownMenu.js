@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { Link, animateScroll as scroll } from "react-scroll";
 import * as CONSTANTS from "../../constants";
 
@@ -49,6 +50,7 @@ const DropdownMenu = (props) => {
       >
         FAQ
       </Link>
+      <NavLink to="/breathwork">Breathwork</NavLink>
       <a href={CONSTANTS.TWITTER}>Twitter</a>
       <a href={CONSTANTS.DISCORD}>Discord</a>
     </div>

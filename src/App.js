@@ -7,8 +7,9 @@ import LoadingSpinner from "./components/UI/LoadingSpinner";
 import StatusMessage from "./components/UI/StatusMessage";
 import TermsPopup from "./components/UI/TermsPopup";
 
-const NotFound = React.lazy(() => import("./Pages/NotFound"));
 const Home = React.lazy(() => import("./Pages/Home"));
+const NotFound = React.lazy(() => import("./Pages/NotFound"));
+const Breathwork = React.lazy(() => import("./Pages/Breathwork"));
 const Terms = React.lazy(() => import("./Pages/Terms"));
 
 function App() {
@@ -35,6 +36,9 @@ function App() {
             </Route>
             <Route path="/terms" exact>
               <Terms />
+            </Route>
+            <Route path="/breathwork" exact>
+              <Breathwork />
             </Route>
             <Route path="*">
               <NotFound />

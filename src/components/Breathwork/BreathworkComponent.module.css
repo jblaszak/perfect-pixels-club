@@ -1,0 +1,67 @@
+:root {
+    --final-opacity: 0.2;
+    --top: 5vh;
+    --bottom: 75vh;
+}
+
+.container {
+    background-color: var(--color-background2);
+    height: 100vh;
+}
+
+
+.breath {
+    font-size: 3rem;
+    font-weight: 700;
+    transform: translateY(var(--top));
+}
+
+.left {
+    margin-left: 3rem;
+}
+
+.right {
+    text-align: right;
+    margin-right: 3rem;
+}
+
+@keyframes Inhale {
+    0% {
+        opacity: 1;
+        transform: translateY(var(--bottom));
+    }
+    100% {
+        opacity: var(--final-opacity);
+        transform: translateY(var(--top));
+    }
+}
+
+@keyframes Hold1 {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: var(--final-opacity);
+    }
+}
+
+@keyframes Exhale {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: var(--final-opacity);
+        transform: translateY(var(--bottom));
+    }
+}
+
+@keyframes Hold2 {
+    0% {
+        opacity: 1;
+        transform: translateY(var(--bottom));
+    }
+    100% {
+        opacity: var(--final-opacity);
+        transform: translateY(var(--bottom));
+    }
+}

@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
+import { NavLink, useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import useOutsideCheck from "../../hooks/useOutsideCheck";
@@ -11,9 +12,10 @@ import DropdownMenu from "./DropdownMenu";
 import classes from "./MainHeader.module.css";
 
 const MainHeader = (props) => {
-  const isSmallScreen = useResponsive("(max-width: 650px)");
+  const isSmallScreen = useResponsive("(max-width: 700px)");
   const [open, setOpen] = useState(false);
   const dropdownRef = useRef(null);
+  const history = useHistory();
 
   const statusMessage = useSelector((state) => state.status.statusMessage);
 
@@ -34,6 +36,9 @@ const MainHeader = (props) => {
   let navbar = (
     <nav className={classes.navbar}>
       <ul className={classes.nav}>
+        <li>
+          <NavLink to="/breathwork">Breathwork</NavLink>
+        </li>
         <li>
           <Link
             activeClass={activeClass}
@@ -99,11 +104,20 @@ const MainHeader = (props) => {
     );
   }
 
+  const logoClickHandler = () => {
+    const pathname = window.location.pathname;
+    if (pathname === "/") {
+      scroll.scrollToTop();
+    } else {
+      history.push("/");
+    }
+  };
+
   return (
     <React.Fragment>
       <header className={headerClasses}>
         <div className={classes.container}>
-          <div className={classes.logo} onClick={() => scroll.scrollToTop()}>
+          <div className={classes.logo} onClick={logoClickHandler}>
             Perfect Pixels Club
           </div>
           {navbar}
