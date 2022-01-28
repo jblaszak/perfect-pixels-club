@@ -21,7 +21,12 @@ const Project = ({
       <div>
         <h1>{title}</h1>
         <p className={classes.description}>{description}</p>
-        <PPCLink link={link} text={linkText} type="external" styling="button" />
+        <PPCLink
+          target={link}
+          text={linkText}
+          type="external"
+          styling="button"
+        />
       </div>
       <div className={`${classes.image} ${classes[orientation]}`}>{image}</div>
     </div>
