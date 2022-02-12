@@ -12,6 +12,7 @@ const Roadmap = () => {
     {
       color: "#83ffc1",
       title: "Crypto Flex Pixels Launch",
+      isDone: true,
       description: `Launch of our first project to learn Web3 and NFTs. This is our community token and that will reward its holders.
       A scaling mint price ensures the early adopters get rewarded the most. We've also added another mechanic (boosts) that we will 
       use to reward holders with higher boosts. As the community grows, the picture will gradually get discovered.`,
@@ -19,6 +20,7 @@ const Roadmap = () => {
     {
       color: "#e7bafa",
       title: "Perfect Pixels Club Site",
+      isDone: true,
       description: `This site right here. In order to bring all the projects we have planned under the same umbrella and provide a 
       central place for reaching our community we've put this site together. Membership to the club is open to anyone that is interested 
       in supporting our projects. Joining the club is as easy as purchasing one of our NFTs. As our community grows there will be all 
@@ -27,6 +29,7 @@ const Roadmap = () => {
     {
       color: "#e8a68b",
       title: "Collaborations",
+      isDone: true,
       description: (
         <React.Fragment>
           We want to work together with others to help build each others
@@ -54,6 +57,7 @@ const Roadmap = () => {
     {
       color: "#bbefff",
       title: "ERC-20 Token",
+      isDone: false,
       description: `An ERC-20 token is planned to provide utility to future projects. We're still exploring how best to distribute these,
       whether through airdrops or some staking mechanism but it will almost certainly be tied to the Crypto Flex Pixels project which is
       intended to act as a longer-term community NFT. Collab NFTs will also see some ERC-20 token related benefit.`,
@@ -61,6 +65,7 @@ const Roadmap = () => {
     {
       color: "#ffead2",
       title: "Future Projects",
+      isDone: false,
       description: `Several future projects are planned, not all of which are listed in the projects section. Some will involve pixels
       and some won't. The crypto space is evolving rapidly and there's no telling where the future will take us, but with each new day 
       of interacting with the community we're getting more and more ideas. Stay tuned...`,
@@ -82,7 +87,8 @@ const Roadmap = () => {
           {roadmapList.map((item) => (
             <div key={item.title}>
               <h1 className={classes.title} style={{ color: item.color }}>
-                {item.title}
+                {item.title}{" "}
+                {item.isDone && <div className={classes.status}>DONE</div>}
               </h1>
               <p className={classes.description}>{item.description}</p>
             </div>
