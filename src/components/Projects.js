@@ -39,7 +39,7 @@ const Projects = () => {
       link: "",
     },
     {
-      title: "Collab Marketplace",
+      title: "Collaborations",
       description: (
         <React.Fragment>
           Interested in a collab? Send us a message on{" "}
@@ -48,7 +48,7 @@ const Projects = () => {
             text="Twitter"
             type="external"
             styling={
-              hoverState === "Collab Marketplace"
+              hoverState === "Collaborations"
                 ? "descriptionHover"
                 : "description"
             }
@@ -59,17 +59,16 @@ const Projects = () => {
             text="Discord"
             type="external"
             styling={
-              hoverState === "Collab Marketplace"
+              hoverState === "Collaborations"
                 ? "descriptionHover"
                 : "description"
             }
-          />
-          ! We've set up a custom smart contract with a payment splitter so both
-          sides are fairly compensated! (Initial sales only)
+          />{" "}
+          to discuss! Collab project NFTs will get boosted staking rewards.
         </React.Fragment>
       ),
       image: <PlaceholderImage />,
-      linkText: "COMING SOON",
+      linkText: "",
       link: "",
     },
   ];

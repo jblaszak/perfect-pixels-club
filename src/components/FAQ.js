@@ -80,8 +80,7 @@ const FAQ = () => {
           <PPCLink target={CONSTANTS.TWITTER} text="Twitter" type="external" />{" "}
           or through{" "}
           <PPCLink target={CONSTANTS.DISCORD} text="Discord" type="external" />.
-          All collab projects will be posted/created on our custom collab
-          marketplace/contract.
+          All collab projects will be created on our custom collab contract.
         </p>
       ),
     },

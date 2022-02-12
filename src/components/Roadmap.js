@@ -1,4 +1,10 @@
+import React from "react";
+
+import PPCLink from "./UI/PPCLink";
 import Section from "./Layout/Section";
+
+import * as CONSTANTS from "../constants";
+
 import classes from "./Roadmap.module.css";
 
 const Roadmap = () => {
@@ -20,10 +26,30 @@ const Roadmap = () => {
     },
     {
       color: "#e8a68b",
-      title: "Collab Marketplace",
-      description: `We want to work together with others to help build each others communities and are open to collaboration! A
-      custom marketplace contract will let us ensure both parties are fairly compensated on initial sales via a payment splitter. Also
-      by having all collabs in one place will allow us to send out rewards/gifts easier. ^_^`,
+      title: "Collaborations",
+      description: (
+        <React.Fragment>
+          We want to work together with others to help build each others
+          communities and are open to collaboration! We've set up a custom smart
+          contract for all collabs so that we may use them for a planned staking
+          feature for boosted rewards of our ERC-20 token. If you're interested
+          in a collab please connect with us on Send us a message on{" "}
+          <PPCLink
+            target={CONSTANTS.TWITTER}
+            text="Twitter"
+            type="external"
+            styling={"description"}
+          />{" "}
+          or{" "}
+          <PPCLink
+            target={CONSTANTS.DISCORD}
+            text="Discord"
+            type="external"
+            styling={"description"}
+          />
+          !
+        </React.Fragment>
+      ),
     },
     {
       color: "#bbefff",
