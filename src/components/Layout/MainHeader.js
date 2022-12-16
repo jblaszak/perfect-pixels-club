@@ -25,9 +25,7 @@ const MainHeader = (props) => {
 
   useOutsideCheck(dropdownRef, onClickHandler);
 
-  const headerClasses = `${classes.header} ${
-    statusMessage ? classes.downShifted : ""
-  }`;
+  const headerClasses = `${classes.header} ${statusMessage ? classes.downShifted : ""}`;
 
   const offset = -60;
   const duration = 500;
@@ -36,9 +34,9 @@ const MainHeader = (props) => {
   let navbar = (
     <nav className={classes.navbar}>
       <ul className={classes.nav}>
-        <li>
+        {/* <li>
           <NavLink to="/breathwork">Breathwork</NavLink>
-        </li>
+        </li> */}
         <li>
           <Link
             activeClass={activeClass}
@@ -85,19 +83,10 @@ const MainHeader = (props) => {
       <nav className={classes.navbar}>
         <ul className={classes.nav}>
           <li>
-            <button
-              href="#"
-              className={classes.hamburger}
-              onClick={onClickHandler}
-            >
+            <button href="#" className={classes.hamburger} onClick={onClickHandler}>
               ≡
             </button>
-            {open && (
-              <DropdownMenu
-                targetRef={dropdownRef}
-                onClickHandler={onClickHandler}
-              />
-            )}
+            {open && <DropdownMenu targetRef={dropdownRef} onClickHandler={onClickHandler} />}
           </li>
         </ul>
       </nav>

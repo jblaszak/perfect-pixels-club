@@ -10,18 +10,8 @@ const DropdownMenu = (props) => {
   const duration = 500;
 
   return (
-    <div
-      ref={props.targetRef}
-      className={classes.dropdown}
-      onClick={props.onClickHandler}
-    >
-      <Link
-        to="projects"
-        spy={true}
-        smooth={true}
-        offset={offset}
-        duration={duration}
-      >
+    <div ref={props.targetRef} className={classes.dropdown} onClick={props.onClickHandler}>
+      <Link to="projects" spy={true} smooth={true} offset={offset} duration={duration}>
         Projects
       </Link>
       <a
@@ -32,25 +22,13 @@ const DropdownMenu = (props) => {
       >
         Crypto Flex Pixels
       </a>
-      <Link
-        to="roadmap"
-        spy={true}
-        smooth={true}
-        offset={offset}
-        duration={duration}
-      >
+      <Link to="roadmap" spy={true} smooth={true} offset={offset} duration={duration}>
         Roadmap
       </Link>
-      <Link
-        to="FAQ"
-        spy={true}
-        smooth={true}
-        offset={offset}
-        duration={duration}
-      >
+      <Link to="FAQ" spy={true} smooth={true} offset={offset} duration={duration}>
         FAQ
       </Link>
-      <NavLink to="/breathwork">Breathwork</NavLink>
+      {/* <NavLink to="/breathwork">Breathwork</NavLink> */}
       <a href={CONSTANTS.TWITTER}>Twitter</a>
       <a href={CONSTANTS.DISCORD}>Discord</a>
     </div>
