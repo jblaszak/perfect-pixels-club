@@ -25,7 +25,7 @@
     "web3": "^1.6.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "build": "react-scripts build && del build/data-generation/",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

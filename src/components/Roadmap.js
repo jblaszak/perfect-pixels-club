@@ -32,11 +32,10 @@ const Roadmap = () => {
       isDone: true,
       description: (
         <React.Fragment>
-          We want to work together with others to help build each others
-          communities and are open to collaboration! We've set up a custom smart
-          contract for all collabs so that we may use them for a planned staking
-          feature for boosted rewards of our ERC-20 token. If you're interested
-          in a collab please connect with us on Send us a message on{" "}
+          We want to work together with others to help build each others communities and are open to
+          collaboration! We've set up a custom smart contract for all collabs so that we may use
+          them for a planned staking feature for boosted rewards of our ERC-20 token. If you're
+          interested in a collab please connect with us on{" "}
           <PPCLink
             target={CONSTANTS.TWITTER}
             text="Twitter"
@@ -78,17 +77,15 @@ const Roadmap = () => {
         <div className={classes.header}>
           <h1>Roadmap</h1>
           <p>
-            This roadmap outlines our goals for this project. Check back here to
-            see the current state of the project and announcements of future
-            projects!
+            This roadmap outlines our goals for this project. Check back here to see the current
+            state of the project and announcements of future projects!
           </p>
         </div>
         <div className={classes.timeline}>
           {roadmapList.map((item) => (
             <div key={item.title}>
               <h1 className={classes.title} style={{ color: item.color }}>
-                {item.title}{" "}
-                {item.isDone && <div className={classes.status}>DONE</div>}
+                {item.title} {item.isDone && <div className={classes.status}>DONE</div>}
               </h1>
               <p className={classes.description}>{item.description}</p>
             </div>
